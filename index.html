@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finca Oliva Olivos</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* El wrapper tiene 3 columnas y 5 filas */
+        #wrapper {
+            display: grid;
+            grid-template-areas:
+                "miHeader "
+                "principal"
+                "img "
+                "lugar"
+                "comunicados"
+                "elFooter "
+            ;
+            grid-template-rows: 80px 1fr 1fr 1fr 1fr 80px;
+            width: 100%;
+            height: 100vh;
+
+        }
+
+        /* En el HEADER tengo: LOGO, TÍTULO y MENÚ (inicio, la finca, contacto) */
+        header {
+            grid-area: miHeader;
+            background-color: #6b8e23;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            margin-left: 15px;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            list-style-type: none;
+            margin-right: 25px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+        /* En la sección PRINCIPAL está la FOTO DE LAS OLIVAS y el título */
+        section#principal {
+            grid-area: principal;
+            background-image: url(./fondo.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section#principal img {
+            width: 100%;
+            height: auto;
+
+        }
+
+        section#principal h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 2px -1px 1px rgb(107, 3, 62);
+            color: #b9f641;
+            font-size: 80px;
+            font-weight: bolder;
+        }
+
+        /* En la sección IMG tengo: el título, las TRES IMÁGENES y sus párrafos  */
+        section#img {
+            grid-area: img;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: beige;
+        }
+
+        section#img h2 {
+            font-family: sans-serif;
+            font-size: 42px;
+            font-weight: bold;
+            text-align: center;
+            color: #879b5f;
+            text-shadow: -3px 2px #fffb00;
+            padding: 10px;
+        }
+
+        section#img article {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        section#img div {
+            width: 350px;
+            height: 420px;
+            margin: 7px;
+            padding: 2px;
+            border: 2px;
+            border-style: double;
+            border-radius: 10%;
+            border-color: #6b8e23;
+            background-color: azure;
+        }
+
+        section#img p {
+            font-family: sans-serif;
+            font-size: 20px;
+            color: rgb(33, 48, 1);
+            font-style: italic;
+            padding: 2px;
+        }
+
+        /* La sección LUGAR tiene adentro: LA UBICACIÓN (maps) y LA COSECHA (cosecha) */
+        section#lugar {
+            grid-area: lugar;
+        }
+
+        section#lugar article {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        section#lugar div {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 20px;
+            color: rgb(33, 48, 1);
+        }
+
+        section#lugar h3 {
+            font-size: 40px;
+            padding: 10px;
+        }
+
+        section#lugar p {
+            font-style: italic;
+            padding: 10px;
+        }
+
+        #maps {
+            width: 50%;
+            background-color: azure;
+        }
+
+        #cosecha {
+            background-color: #fffec4;
+            width: 50%;
+        }
+
+        /* COMUNICADOS */
+        aside {
+            grid-area: comunicados;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            color: rgb(48, 1, 28);
+            padding: 10px;
+            background-color: azure;
+        }
+
+        aside div#comunicados {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        /* Le armé una clase para el título de los comunicados - PRODUCTOS  */
+        .parrafoTitulo {
+            font-family: sans-serif;
+            font-size: 18px;
+            color: #879b5f;
+            text-align: center;
+            text-shadow: -1px 2px rgb(107, 3, 62);
+        }
+
+        /* FOOTER - Tiene logos que redireccionan a las páginas de Instagram, Facebook y a WhatsApp */
+        footer {
+            grid-area: elFooter;
+            background-color: #6b8e23;
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer div a {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* aplico MEDIAQUERYS para las medidas entre 0 y 992px */
+        @media screen and (max-width: 992px) {
+            header p {
+                font-size: 25px;
+                color: aqua;
+            }
+
+            section#img h2 {
+                font-size: 20px;
+                color: #6b8e23;
+            }
+
+            section#lugar h3 {
+                font-size: 20px;
+                color: black;
+            }
+
+        }
+
+        /* aplico MEDIAQUERYS para las medidas de más de 992px */
+        @media screen and (min-width: 992px) {
+            #wrapper {
+                grid-template-areas:
+                    "miHeader miHeader "
+                    "principal  principal"
+                    "img  comunicados"
+                    "lugar  comunicados"
+                    "elFooter  elFooter"
+                ;
+            }
+
+            aside div#comunicados {
+                grid-area: comunicados;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            aside p{
+                padding:20px;
+                font-size: 20px;
+            }
+
+            .parrafoTitulo {
+                font-family: sans-serif;
+                font-size: 40px;
+                color: #879b5f;
+                text-align: center;
+                text-shadow: -1px 2px rgb(107, 3, 62);
+            }
+
+            section#lugar{
+                background-color: #fffec4;
+            }
+            
+            #maps{
+                background-color: #fffec4;
+
+            }
+
+            aside {
+                visibility: visible;
+            }
+        }
+
+        /*En mediaquerys muevo los COMUNICADOS (aside), en el celu los veo como fila y la PC como una columna a la derecha  */
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="miHeader">
+            <img src="logo.finca.png" alt="logo de la finca" width="70px" height="auto" />
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="tienda.html">LA FINCA</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="principal">
+            <h1>FINCA OLIVA OLIVOS</h1>
+        </section>
+
+        <section id="img">
+            <h2>Sobre LA FINCA</h2>
+            <article>
+                <div>
+                    <img src="./campo.jpg" alt="vista de la finca" width="300px" height="auto" />
+                    <p>Somos una empresa familiar de producción de aceites de oliva y productos de elaboración
+                        artesanal.
+                        Además contamos con un salón en el que ofrecemos almuerzos y meriendas, elaboradosartesanalmente
+                        y
+                        con productos regionales.</p>
+                </div>
+                <div>
+                    <img src="./comida.jpg" alt="almuerzo en la finca" width="200px" height="auto" />
+                    <p>Vas a poder disfrutar de un día diferente lleno de experiencias, de aromas y sabores. Te
+                        esperamos
+                        para almorzar o merendar en la finca y te recordamos que tenemos cupos limitados</p>
+                </div>
+                <div>
+                    <img src="./aceite.jpg" alt="aceite de oliva virgen extra" width="300px" height="auto" />
+                    <p>En el AOVE encontramos todas las propiedades saludables que se relacionan con el Aceite de Oliva.
+                        Es
+                        un producto formado en un 100% por zumo de oliva que se obtiene a través de procesos mecánicos,
+                        al
+                        que no se le añade ningún tipo de aditivo ni conservante. </p>
+                </div>
+            </article>
+        </section>
+
+        <section id="lugar">
+            <article>
+                <div id="maps">
+                    <h3>Ubicación</h3>
+                    <img src="./welcome.jpg" alt="salon de la finca" width="200px" height="auto" />
+                    <p>La finca se encuentra camino a la ex Ruta 3, en el kilómetro 665,5 (Bahía Blanca, Provincia de
+                        Buenos Aires, Argentina)</p>
+                </div>
+
+                <div id="cosecha">
+                    <h3>La Cosecha</h3>
+                    <img src="./vista.aerea.jpg" alt="la finca" width="200px" height="auto" />
+                    <p>Todo un año regando, fertilizando y podando y ellas nos regalan sus frutas. Nos toca a nosotros
+                        ahora
+                        convertirlo en el oro verde</p>
+                </div>
+            </article>
+
+        </section>
+
+        <aside>
+            <p class="parrafoTitulo">Productos</p>
+            <div id="comunicados">
+                <div>
+                    <img src="./almuerzo.png" alt="menú" width="auto" height="200px" />
+                    <p>Domingo 12 de Junio de 2022</p>
+                </div>
+                <div>
+                    <img src="./picada.jpg" alt="eventos" width="auto" height="200px" />
+                    <p>Realizamos eventos</p>
+                </div>
+                <div>
+                    <img src="./Screenshot_20220609-194427_WhatsApp.jpg" alt="productos" width="auto" height="200px" />
+                    <p>Lisa de produtos a la venta</p>
+                </div>
+            </div>
+
+        </aside>
+
+        <footer>
+            <p>Seguinos en:</p>
+            <div>
+                <a href="https://www.instagram.com/fincaolivaolivos/">
+                    <img src="https://norfipc.com/img/logos/logotipo-oficial-instagram-2016.png" alt=Intagram
+                        width="30px" height="auto" />
+                </a>
+                <a href="https://www.facebook.com/fincaolivaolivos/">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1409/1409943.png" alt=Facebook width="30px"
+                        height="auto" />
+                </a>
+                <a
+                    href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F542914026545&e=ATNsIu4SU8u9MTnJXjBFq3DkdFM-H2iNYjCIFiiYEYAwYh5rGT1DR_XsYAJtrZ3T8oTVe1VWwHBKxbNFL3RR3Q&s=1">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png" alt=WhatsApp width="30px"
+                        height="auto" />
+                </a>
+            </div>
+
+            <p>Finca Oliva Olivos - 2013</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
