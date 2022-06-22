@@ -21,89 +21,61 @@
 		</nav>
 	</header>
 	<!-- formulario de contacto -->
-	<div>
-		<h1>
-			Contacto
-		</h1>
-		<p>
-			Envianos un WhatsApp al +5492917777777 o podés encontrarnos en Instagram como <a
-				href="https://www.instagram.com/_distrito.z?igshid=YmMyMTA2M2Y=" target="_blank">@_distrito.z</a>
-		</p>
-	</div>
-
-	<section class="formulario">
-		<h2 class="colorBlack">¿Querés que te contactemos?</h2>
-		<article>
-			<form action="#" class="veinte">
-				<label for="name"> Nombre:
-					<input type="text" placeholder="Escribe tu nombre">
-				</label>
-				<label for="email">E-mail:
-					<input type="email" placeholder="aaa@gmail.com" name="email">
-				</label>
-				<label for="123456"> Celular:
-					<input type="number" placeholder="123456">
-				</label>
-				<article >
-					Sexo:
-				<span>
-					Masculino
-					<input type="radio" name="sexo" value="masculino">
-				</span>
-				<span>
-					Femenino
-					<input type="radio" name="sexo" value="femenino">
-				</span>
-				<span>
-					No binario
-					<input type="radio" name="sexo" value="no binario">
-				</span>
-				</article>
-
-				<p>
-					<input type="submit" value="Enviar">
-					<input type="reset" value="En otro momento">
+	<section id="contact">
+		<h1 class="tit">Contacto</h1>
+		<div id="containerContact">
+			<div id="titContact">
+				<p class="pContact">
+					Envianos un WhatsApp al +5492917777777 o podés encontrarnos en Instagram como <a
+						href="https://www.instagram.com/_distrito.z?igshid=YmMyMTA2M2Y="
+						target="_blank">@_distrito.z</a>
 				</p>
+			</div>
 
-			</form>
-		</article>
-	</section>
+			<div id="divForm">
+				<h2>¿Querés que te contactemos?</h2>
+				<form method="get" action="#">
+					<div>
+						<label for="name"> Nombre:
+							<input type="text" placeholder="Escribe tu nombre" id="name"></label>
+						<label for="email">E-mail:
+							<input type="email" placeholder="aaa@gmail.com" id="email"></label>
+						<label for="number-phone"> Celular:
+							<input type="number" placeholder="291 4000000" id="number-phone"></label>
+					</div>
 
-	<section>
-		<h3>También podés encontrarnos en Berutti 263</h3>
-		<p class="alCentro">Te recordamos nuestro horarios de atención:</p>
-		<div>
-			<table border="2" cellpadding="10" cellspacing="10">
-				<tr>
-					<th>Lunes</th>
-					<th>Martes</th>
-					<th>Miércoles</th>
-					<th>Jueves</th>
-					<th>Viernes</th>
-				</tr>
-				<tr>
-					<td> 9hs a 12hs </td>
-					<td> 9hs a 12hs </td>
-					<td> 9hs a 12hs </td>
-					<td> 9hs a 12hs </td>
-					<td> 9hs a 12hs </td>
-				</tr>
-				<tr>
-					<td> 16hs a 21hs </td>
-					<td> 16hs a 21hs </td>
-					<td> 16hs a 21hs </td>
-					<td> 16hs a 21hs </td>
-					<td> 16hs a 21hs </td>
-				</tr>
-			</table>
+					<div>
+						<label for="favoriteOnly">Sexo:</label>
+						<select name="favoriteOnly" id="favoriteOnly">
+							<option>Femenino</option>
+							<option>Masculino</option>
+							<option>No Binario</option>
+						</select>
+						<p>
+							<input type="submit" value="Enviar">
+						</p>
+					</div>
+				</form>
+			</div>
+
+			<div class="divEspacio" id="divHorario">
+				<h3>También podés encontrarnos en Berutti 263</h3>
+				<p>Te recordamos nuestro horarios de atención:</p>
+				<span>Lunes a Viernes de 9hs a 12hs y de 16hs a 21hs</span>
+				<p>Los domingos y feriados permanecemos cerrados</p>
+			</div>
 		</div>
-		<p class="alCentro">Los domingos y feriados permanecemos cerrados</p>
+
+
+
 	</section>
 
 	<footer>
-		<p>Encontranos en Berutti 263 Bahía Blanca de 9hs a 12hs y de 16hs a 21hs</p>
 		<p>¡Movete bien!</p>
-		<img src="./Imágenes/Distrito Z.plantilla.png" alt="distrito z - zona de entrenamiento" width="200" height="30">
+		<a href="https://www.instagram.com/_distrito.z/">
+			<img src="https://norfipc.com/img/logos/logotipo-oficial-instagram-2016.png" alt=Intagram width="30px"
+				height="auto" />
+		</a>
 	</footer>
 
 </body>
