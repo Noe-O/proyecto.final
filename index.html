@@ -8,28 +8,37 @@
     <title>
         Distrito Z - Zona de entrenamiento
     </title>
+    <link rel="stylesheet" href="./boostrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./CSS/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="./boostrap/js/jquery.slim.min.js"></script>
+    <script src="./boostrap/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
 <body>
     <header>
-        <img src="./Imágenes/Dz.logo.png" alt="logo" width="100" height="auto">
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="somos.html">¿Quiénes Somos?</a></li>
-                <li><a href="quees.html">¿Qué es Distrito Z?</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-            </ul>
+        <img src="./Imágenes/Dz.logo.png" alt="logo" width="150px" height="auto">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="somos.html">¿Quiénes Somos?</a></li>
+                    <li><a href="quees.html">¿Qué es Distrito Z?</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <section id="plantillaIndex">
-        <img src="../Distrito Z/Imágenes/Distrito Z.plantilla.png" alt="Distrito Z - Zona de entrenamiento"
-            width="900px" height="auto" />
+        <img src="../Distrito Z/Imágenes/Distrito Z.plantilla.png" alt="Distrito Z - Zona de entrenamiento" width="60%"
+            height="auto" />
     </section>
 
 
@@ -37,15 +46,14 @@
     <section id="ppal">
         <h1 class="tit">Sabemos que sos tu prioridad y por eso queremos que te ocupes de vos </h1>
 
-        <div>
-            <span class="spanInterlineado">
+        <div class="card border-0 align-items-center ">
+            <span class="spanInterlineado ">
                 Nos gusta referirnos a DZ como una zona de entrenamiento, ya que la simple palabra gimnasio nos
                 llevaría a pensar en máquinas de peso y fuerza con las cuales realizar todo tipo de ejercicios.
                 Aquí contamos con elementos de entrenamiento que van a ser nuestros aliados en la actividad.
             </span>
 
-
-            <img src="./Imágenes/DZ.entrenamiento1.jpg" width="400" height="auto" />
+            <img class="py-4" src="./Imágenes/DZ.entrenamiento1.jpg" width="400" height="auto" />
 
             <span class="spanInterlineado">
                 Trabajamos en un espacio con capacidad reducida (máximo 20 personas) y esto nos ayuda a brindarte una

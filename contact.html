@@ -3,31 +3,39 @@
 
 <head>
 	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Contacto y Redes</title>
-	<link rel="stylesheet" href="./CSS/estilo.css"/>
+	<link rel="stylesheet" href="./boostrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./CSS/estilo.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<script src="./boostrap/js/jquery.slim.min.js"></script>
+	<script src="./boostrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 	<header>
-		<img src="./Imágenes/Dz.logo.png" alt="logo" width="100" height="50">
-		<nav>
-			<ul>
-				<li><a href="index.html">Inicio</a></li>
-				<li><a href="somos.html">¿Quiénes Somos?</a></li>
-				<li><a href="quees.html">¿Qué es Distrito Z?</a></li>
-				<li><a href="galeria.html">Galería</a></li>
-				<li><a href="contact.html">Contacto</a></li>
-			</ul>
-			</ul>
+		<img src="./Imágenes/Dz.logo.png" alt="logo" width="150px" height="auto">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="somos.html">¿Quiénes Somos?</a></li>
+					<li><a href="quees.html">¿Qué es Distrito Z?</a></li>
+					<li><a href="galeria.html">Galería</a></li>
+					<li><a href="contact.html">Contacto</a></li>
+				</ul>
+			</div>
 		</nav>
 	</header>
 	<!-- formulario de contacto -->
 	<section id="contact">
 		<h1 class="tit">Contacto</h1>
-		<div id="containerContact">
+		<div id="container-fluid">
 			<div id="titContact">
 				<p class="pContact">
 					Envianos un WhatsApp al +5492917777777 o podés encontrarnos en Instagram como <a
@@ -36,42 +44,40 @@
 				</p>
 			</div>
 
-			<div id="divForm">
-				<h2>¿Querés que te contactemos?</h2>
-				<form method="get" action="#">
-					<div>
-						<label for="name"> Nombre:
-							<input type="text" placeholder="Escribe tu nombre" id="name"></label>
-						<label for="email">E-mail:
-							<input type="email" placeholder="aaa@gmail.com" id="email"></label>
-						<label for="number-phone"> Celular:
-							<input type="number" placeholder="291 4000000" id="number-phone"></label>
-					</div>
+			<div class="card-deck">
+				<div class="card">
+					<h2>¿Querés que te contactemos?</h2>
+					<form class="form-group" action="#">
+						<div>
+							<label for="name"> Nombre:
+								<input type="text" placeholder="Escribe tu nombre" id="name"></label>
+							<label for="email">E-mail:
+								<input type="email" placeholder="aaa@gmail.com" id="email"></label>
+							<label for="number-phone"> Celular:
+								<input type="number" placeholder="291 4000000" id="number-phone"></label>
+						</div>
 
-					<div>
-						<label for="favoriteOnly">Sexo:</label>
-						<select name="favoriteOnly" id="favoriteOnly">
-							<option>Femenino</option>
-							<option>Masculino</option>
-							<option>No Binario</option>
-						</select>
-						<p>
-							<input type="submit" value="Enviar">
-						</p>
-					</div>
-				</form>
-			</div>
+						<div>
+							<label for="selected">Sexo:</label>
+							<select name="Sexo" id="selected">
+								<option selected disabled>seleccionar</option>
+								<option>Femenino</option>
+								<option>Masculino</option>
+								<option>No Binario</option>
+							</select>
+						</div>
+						<button type="submit" class="btn btn-success">Enviar</button>
+					</form>
+				</div>
 
-			<div class="divEspacio" id="divHorario">
-				<h3>También podés encontrarnos en Berutti 263</h3>
-				<p>Te recordamos nuestro horarios de atención:</p>
-				<span>Lunes a Viernes de 9hs a 12hs y de 16hs a 21hs</span>
-				<p>Los domingos y feriados permanecemos cerrados</p>
+				<div class="card bg-lightBlue">
+					<h3>También podés encontrarnos en Berutti 263</h3>
+					<p>Te recordamos nuestro horarios de atención:</p>
+					<span>Lunes a Viernes de 9hs a 12hs y de 16hs a 21hs</span>
+					<p>Los domingos y feriados permanecemos cerrados</p>
+				</div>
 			</div>
 		</div>
-
-
-
 	</section>
 
 	<footer>
