@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Noe-O/proyecto.final/issues"
   },
-  "homepage": "https://github.com/Noe-O/proyecto.final#readme"
+  "homepage": "https://github.com/Noe-O/proyecto.final#readme",
+  "dependencies": {
+    "package.json": "^2.0.1"
+  }
 }
