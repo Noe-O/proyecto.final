@@ -3,8 +3,23 @@
     padding: 0px;
 }
 
+/* uso MAP GET para armar colores de fondo*/
+$colores: (
+    rosa: #ffe4db,
+    blancoRosado:#FFF7F5,
+    lightBlue: #aceeed,
+    agua: #CAECEB
+);
+
+@each $name, $color in $colores {
+    .bg-#{$name} {
+        background: $color;
+    }
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
 }
 
 header {
@@ -24,13 +39,14 @@ header {
 
             &:hover {
                 color: #00bdba;
-                font-size: 20px;
+                font-size: 1.5rem;
             }
         }
 
     }
 }
 
+/*La portada del INDEX*/
 section#plantillaIndex {
     background-color: black;
     text-align: center;
@@ -38,24 +54,7 @@ section#plantillaIndex {
     padding-top: 50px;
 }
 
-section#ppal {
-    text-align: center;
-
-    padding: 20px;
-}
-
-.tit {
-    padding: 20px;
-    font-size: 35px;
-    text-decoration: underline 1px;
-    text-shadow: -1px 1px white;
-    font-weight: bold;
-}
-
-.divEspacio {
-    padding: 20px;
-}
-
+/*Esta seccion se encuentra en la pagina de GALERÍA (arriba del footer)*/
 section#seguinos {
     background-color: black;
     color: #ffe4db;
@@ -63,37 +62,34 @@ section#seguinos {
     padding: 20px;
 }
 
+/*seccion de la página contacto*/
 section#contact {
     background-image: url("../img/fondo.jpg");
     background-size: cover;
     text-align: center;
     padding: 20px;
     line-height: 35px;
+
+    & .claseP {
+        color: #30700B;
+        font-size: 1.3rem;
+        text-shadow: 1px 1px black;
+        background-color: beige;
+    }
 }
 
-.card {
-    background-color:'rgb(255, 228, 219, 0.5)';
-    text-align: center;
-    width: fit-content;
+/*uso MIXIN para este título H1 que aparece en todas las páginas*/
+@mixin tit {
     padding: 20px;
+    color:black;
+    font-size: 2rem;
+    text-shadow: -1px 1px white;
+    font-weight: bold;
+    text-align: center;
 }
 
-.bg-lightBlue {
-    width: fit-content;
-    margin: auto;
-    margin-top: 30px;
-    background-color: #aceeed;
-    grid-area: divHorario;
-}
-
-.bg-rosa {
-    background-color: #ffe4db;
-}
-
-.pContact {
-    color: black;
-    font-size: 20px;
-    text-shadow: 1px 1px black;
+h1 {
+    @include tit
 }
 
 footer {
