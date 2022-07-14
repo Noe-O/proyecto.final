@@ -1,0 +1,99 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* uso MAP GET para armar colores de fondo*/
+$colores: (
+    rosa: #ffe4db,
+    blancoRosado:#FFF7F5,
+    lightBlue: #aceeed,
+    agua: #CAECEB
+);
+
+@each $name, $color in $colores {
+    .bg-#{$name} {
+        background: $color;
+    }
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+}
+
+header {
+    background: #bd0003;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 12px;
+
+        a {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                color: #00bdba;
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+}
+
+/*La portada del INDEX*/
+section#plantillaIndex {
+    background-color: black;
+    text-align: center;
+    height: 230px;
+    padding-top: 50px;
+}
+
+/*Esta seccion se encuentra en la pagina de GALERÍA (arriba del footer)*/
+section#seguinos {
+    background-color: black;
+    color: #ffe4db;
+    text-align: center;
+    padding: 20px;
+}
+
+/*seccion de la página contacto*/
+section#contact {
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    line-height: 35px;
+
+    & .claseP {
+        color: #30700B;
+        font-size: 1.3rem;
+        text-shadow: 1px 1px black;
+        background-color: beige;
+    }
+}
+
+/*uso MIXIN para este título H1 que aparece en todas las páginas*/
+@mixin tit {
+    padding: 20px;
+    color:black;
+    font-size: 2rem;
+    text-shadow: -1px 1px white;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    @include tit
+}
+
+footer {
+    background-color: #bd0003;
+    text-align: center;
+    color: #00bdba;
+}
