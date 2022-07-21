@@ -11,7 +11,8 @@ $colores: (
     agua: #CAECEB
 );
 
-@each $name, $color in $colores {
+@each $name,
+$color in $colores {
     .bg-#{$name} {
         background: $color;
     }
@@ -26,7 +27,10 @@ header {
     background: #bd0003;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
+    position:fixed;
+    width: 100%;
+
 
     nav ul li {
         list-style-type: none;
@@ -38,8 +42,12 @@ header {
             color: white;
 
             &:hover {
-                color: #00bdba;
+                text-shadow: none;
+                text-decoration: none;
+                color: beige;
                 font-size: 1.5rem;
+                background-color: black;
+                border-radius: 0.25rem;
             }
         }
 
@@ -62,26 +70,41 @@ section#seguinos {
     padding: 20px;
 }
 
+.carousel-control-prev-icon{
+    background-image: url("../img/previous.png");
+}
+
+.carousel-control-next-icon{
+    background-image: url("../img/next.png");
+}
+
 /*seccion de la página contacto*/
 section#contact {
     background-image: url("../img/fondo.jpg");
     background-size: cover;
     text-align: center;
-    padding: 20px;
     line-height: 35px;
 
     & .claseP {
         color: #30700B;
         font-size: 1.3rem;
-        text-shadow: 1px 1px black;
         background-color: beige;
+        border-radius: 0.25rem;
+        a{
+            text-decoration: none;
+            color:#bd0003;
+            &:hover{
+                font-weight: bolder;
+            }
+        }
     }
+
 }
 
 /*uso MIXIN para este título H1 que aparece en todas las páginas*/
 @mixin tit {
     padding: 20px;
-    color:black;
+    color: black;
     font-size: 2rem;
     text-shadow: -1px 1px white;
     font-weight: bold;
@@ -96,4 +119,29 @@ footer {
     background-color: #bd0003;
     text-align: center;
     color: #00bdba;
+    font-size: 0.9rem;
+
+    img:hover {
+        width: 35px;
+    }
+
+    div {
+        div {
+            a {
+                text-decoration: none;
+                color: #00bdba;
+                &:hover{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+
+            &:hover {
+                font-size: 1rem;
+                color: white;
+                background-color: black;
+            }
+        }
+    }
+
 }
