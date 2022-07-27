@@ -22,18 +22,21 @@ $color in $colores {
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2rem;
+    & .card, .carousel, .carousel-item, .carousel-inner{
+        position: inherit;
+    }
 }
 
 header {
-    .navbar{
+    .navbar {
         padding: 0rem;
     }
-    .relleno{
+
+    .relleno {
         height: 70px;
         width: 100%;
-        &.bg-{$name:rojo}
+
     }
-    &.bg-{$name:'rojo'}
 
     width: 100%;
 
@@ -75,11 +78,11 @@ section#seguinos {
     padding: 20px;
 }
 
-.carousel-control-prev-icon{
+.carousel-control-prev-icon {
     background-image: url("../img/previous.png");
 }
 
-.carousel-control-next-icon{
+.carousel-control-next-icon {
     background-image: url("../img/next.png");
 }
 
@@ -95,10 +98,12 @@ section#contact {
         font-size: 1.3rem;
         background-color: beige;
         border-radius: 0.25rem;
-        a{
+
+        a {
             text-decoration: none;
-            color:#bd0003;
-            &:hover{
+            color: #bd0003;
+
+            &:hover {
                 font-weight: bolder;
             }
         }
@@ -135,7 +140,8 @@ footer {
             a {
                 text-decoration: none;
                 color: #00bdba;
-                &:hover{
+
+                &:hover {
                     text-decoration: none;
                     color: white;
                 }
