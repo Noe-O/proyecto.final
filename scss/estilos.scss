@@ -77,8 +77,14 @@ section#plantillaIndex {
 
 section#principalIndex{
     .card:hover{
-        background-color: #91f457;
+        background-color:#ffe4db;
     }
+}
+
+/*uso esta clase en dos imagenes de "QUÉ ES DZ"*/
+
+.imgQueEs:hover{
+    width: 300px;
 }
 
 /*Esta seccion se encuentra en la pagina de GALERÍA (arriba del footer)*/
