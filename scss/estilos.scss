@@ -22,7 +22,11 @@ $color in $colores {
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2rem;
-    & .card, .carousel, .carousel-item, .carousel-inner{
+
+    & .card,
+    .carousel,
+    .carousel-item,
+    .carousel-inner {
         position: inherit;
     }
 }
@@ -78,13 +82,19 @@ section#seguinos {
     padding: 20px;
 }
 
-.carousel-control-prev-icon {
-    background-image: url("../img/previous.png");
+#accordion {
+    img:hover {
+        height: 350px;
+    }
+
+    .card:hover {
+        background-color: #ffe4db;
+        color: #bd0003;
+        font-weight: bold;
+    }
+
 }
 
-.carousel-control-next-icon {
-    background-image: url("../img/next.png");
-}
 
 
 /*seccion de la página contacto*/
