@@ -71,7 +71,14 @@ header {
 section#plantillaIndex {
     background-color: black;
     text-align: center;
-    height: 230px;
+    height: auto;
+    padding: 5%;
+}
+
+section#principalIndex{
+    .card:hover{
+        background-color: #91f457;
+    }
 }
 
 /*Esta seccion se encuentra en la pagina de GALERÍA (arriba del footer)*/
