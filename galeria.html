@@ -2,43 +2,43 @@
 <html lang="es">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Fotos</title>
-	<link rel="stylesheet" href="./boostrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="./css/main.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-	<script src="./boostrap/js/jquery.slim.min.js"></script>
-	<script src="./boostrap/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos</title>
+    <link rel="stylesheet" href="./boostrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="./boostrap/js/jquery.slim.min.js"></script>
+    <script src="./boostrap/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
 <body>
-	<header class="bg-rojo">
-		<div class="d-flex justify-content-between position-fixed bg-rojo w-100">
-			<img src="./img/Dz.logo.png" alt="logo" width="auto" height="60px">
-			<nav class="navbar navbar-expand-lg navbar-dark">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul>
-						<li><a href="index.html">Inicio</a></li>
-						<li><a href="somos.html">¿Quiénes Somos?</a></li>
-						<li><a href="quees.html">¿Qué es Distrito Z?</a></li>
-						<li><a href="galeria.html">Galería</a></li>
-						<li><a href="contact.html">Contacto</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-		<div class="relleno"></div>
-	</header>
+    <header class="bg-rojo">
+        <div class="d-flex justify-content-between bg-rojo position-fixed w-100">
+            <img src="./img/Dz.logo.png" alt="logo" width="auto" height="60px">
+            <nav class="navbar navbar-expand-lg navbar-dark justify-content-end">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-right" id="navbarNav">
+                    <ul class="flex-lg-row">
+                        <li class="nav-item"><a href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a href="somos.html">¿Quiénes Somos?</a></li>
+                        <li class="nav-item"><a href="quees.html">¿Qué es Distrito Z?</a></li>
+                        <li class="nav-item"><a href="galeria.html">Galería</a></li>
+                        <li class="nav-item"><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="relleno"></div>
+    </header>
 
 
-	<div class="text-center bg-lightBlue py-3">
+    <div class="text-center bg-lightBlue py-3">
         <div>
             <h1>Galería</h1>
             <p>En Distrito Z propiciamos un ambiente colaborativo y respetuoso, sin importar
@@ -46,78 +46,56 @@
                 física, etc. </p>
         </div>
         <div class="container">
-            <div id="accordion" role="tablist" class="card-deck flex-column flex-md-row  p-3">
-                <div class="card  rounded bg-lightBlue">
-                    <div role="tab" id="headingOne">
-                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            <img src="./img/par.png" alt="Concentración" width="auto" height="300px">
-                        </a>
-                    </div>
-                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="card-body">
-                            El bienestar físico es lo más importante en nuestras vidas
-                        </div>
+            <div class="fotos card-deck flex-column flex-md-row  p-3">
+                <div class="card  bg-lightBlue">
+                    <img class="rounded card-img" src="./img/par.png" alt="Concentracion" />
+                    <div class="card-img-overlay">
+                        <p class="card-text">El bienestar físico es lo más importante en nuestras vidas</p>
                     </div>
                 </div>
 
-                <div class="card rounded bg-lightBlue">
-                    <div role="tab" id="headingTwo">
-                        <a data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <img src="./img/juani.png" alt="sentadilla" width="auto" height="300px">
-                        </a>
-                    </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="card-body">
-                            Cada nuevo/a integrante es una parte escencial en la familia de DZ, por ello queremos que
-                            estés a gusto.
-                        </div>
+
+                <div class="card  bg-lightBlue">
+                    <img class="rounded card-img" src="./img/juani.png" alt="sentadilla" />
+
+                    <div class="card-img-overlay">
+                        <p class="card-text">Cada nuevo/a integrante es una parte escencial en la familia de DZ, por ello queremos que
+                        estés a gusto.</p> 
                     </div>
                 </div>
             </div>
 
-            <div id="accordion" role="tablist" class="card-deck flex-column flex-lg-row py-3">
-                <div class="card rounded bg-lightBlue">
-                    <div role="tab" id="headingTwo">
-                        <a data-toggle="collapse" href="#collapseThree" aria-expanded="false"
-                            aria-controls="collapseThree">
-                            <img src="./img/DZ.jefe.jpg" alt="Profesor dando indicaciones de movimiento" width="auto"
-                                height="300px">
-                        </a>
-                    </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <div class="card-body">
+            <div class="fotos card-deck flex-column flex-lg-row py-3">
+                <div class="card  bg-lightBlue">
+
+                    <img class="rounded card-img" src="./img/DZ.jefe.jpg" alt="Indicaciones de movimiento" />
+
+                    <div class="card-img-overlay">
+                        <p class="card-text">
                             En los desafíos que te propongas te vamos a estar alentando y supervisando.
-                        </div>
+                        </p>
+
                     </div>
                 </div>
 
-                <div class="card rounded bg-lightBlue">
-                    <div role="tab" id="headingTwo">
-                        <a data-toggle="collapse" href="#collapseFour" aria-expanded="false"
-                            aria-controls="collapseFour">
-                            <img src="./img/DZ.entrenamiento1.jpg" alt="Profesor observando la rutina" width="auto"
-                                height="300px">
-                        </a>
+                <div class="card bg-lightBlue">
+
+                    <img class="rounded card-img" src="./img/DZ.entrenamiento1.jpg" alt="rutina" />
+
+                    <div class="card-img-overlay">
+                        <p class="card-text">El plan de entrenamiento es individual y se adapta a tus objetivos y
+                            condiciones.</p>
+
                     </div>
-                    <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
-                        <div class="card-body">
-                            El plan de entrenamiento es individual y se adapta a tus objetivos y condiciones.
-                        </div>
-                    </div>
+
                 </div>
 
-                <div class="card  rounded bg-lightBlue">
-                    <div role="tab" id="headingFive">
-                        <a data-toggle="collapse" href="#collapseFive" aria-expanded="false"
-                            aria-controls="collapseFive">
-                            <img src="./img/DZ.entrenamiento.png" alt="mujer entrenando en distrito z" width="auto"
-                                height="300px" class="mb-0">
-                        </a>
-                    </div>
-                    <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
-                        <div class="card-body">
-                            Te esperamos en: Distrito Z - Zona de Entrenamiento
-                        </div>
+                <div class="card  bg-lightBlue">
+
+                    <img class="rounded card-img" src="./img/DZ.entrenamiento.png" alt="chica entrenando en DZ" />
+
+                    <div class="card-img-overlay">
+                        <p class="card-text">Te esperamos en: Distrito Z - Zona de Entrenamiento</p>
                     </div>
                 </div>
             </div>
@@ -126,27 +104,27 @@
 
 
 
-	<section id="seguinos">
-		<p> Si querés ver más fotos o videos podés seguirnos en Instagram como <a
-				href="https://www.instagram.com/_distrito.z/" target="_blank">@_distrito.z</a>
-		</p>
-		<h3> Estamos listos... ¿Y vos? ¿Qué estás esperando para venir entrenar?</h3>
-	</section>
-	<footer class="py-2">
-		<div class="container-fluid row align-items-center justify-content-around">
-			<div class="rounded">
-				<a href="contact.html#mapa">Berutti 263 - Bahía Blanca</a>
-			</div>
-			<div class="rounded">
-				<a href="https://www.instagram.com/_distrito.z/">Seguinos:<img src="./img/instagram.png" alt=Instagram
-						width="30px" /></a>
-			</div>
-			<div class="rounded">
-				¡Movete bien!
-			</div>
+    <section id="seguinos">
+        <p> Si querés ver más fotos o videos podés seguirnos en Instagram como <a
+                href="https://www.instagram.com/_distrito.z/" target="_blank">@_distrito.z</a>
+        </p>
+        <h3> Estamos listos... ¿Y vos? ¿Qué estás esperando para venir entrenar?</h3>
+    </section>
+    <footer class="py-2">
+        <div class="container-fluid row align-items-center justify-content-around">
+            <div class="rounded">
+                <a href="contact.html#mapa">Berutti 263 - Bahía Blanca</a>
+            </div>
+            <div class="rounded">
+                <a href="https://www.instagram.com/_distrito.z/">Seguinos:<img src="./img/instagram.png" alt=Instagram
+                        width="30px" /></a>
+            </div>
+            <div class="rounded">
+                ¡Movete bien!
+            </div>
 
-		</div>
-	</footer>
+        </div>
+    </footer>
 </body>
 
 </html>

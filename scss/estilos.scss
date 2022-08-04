@@ -31,6 +31,21 @@ body {
     }
 }
 
+
+/*uso MIXIN para este título H1 que aparece en todas las páginas*/
+@mixin tit {
+    padding: 20px;
+    color: black;
+    font-size: 2rem;
+    text-shadow: -1px 1px white;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    @include tit
+}
+
 header {
     .navbar {
         padding: 0rem;
@@ -44,26 +59,30 @@ header {
 
     width: 100%;
 
-    nav ul li {
-        list-style-type: none;
-        display: inline-block;
-        padding-left: 12px;
-        padding-right: 12px;
+    nav ul {
+        display: flex;
+        flex-direction: column;
 
-        a {
-            text-decoration: none;
-            color: white;
+        li {
+            list-style-type: none;
+            padding-left: 12px;
+            padding-right: 12px;
 
-            &:hover {
-                text-shadow: none;
+            a {
                 text-decoration: none;
-                color: #bd0003;
-                font-size: 1.5rem;
-                background-color: white;
-                border-radius: 0.25rem;
-            }
-        }
+                color: white;
 
+                &:hover {
+                    text-shadow: none;
+                    text-decoration: none;
+                    color: #bd0003;
+                    font-size: 1.5rem;
+                    background-color: white;
+                    border-radius: 0.25rem;
+                }
+            }
+
+        }
     }
 }
 
@@ -75,15 +94,15 @@ section#plantillaIndex {
     padding: 5%;
 }
 
-section#principalIndex{
-    .card:hover{
-        background-color:#ffe4db;
+section#principalIndex {
+    .card:hover {
+        background-color: #ffe4db;
     }
 }
 
 /*uso esta clase en dos imagenes de "QUÉ ES DZ"*/
 
-.imgQueEs:hover{
+.imgQueEs:hover {
     width: 300px;
 }
 
@@ -95,23 +114,37 @@ section#seguinos {
     padding: 20px;
 }
 
-#accordion {
-    img:hover {
-        height: 350px;
+.fotos {
+    .card-img-overlay {
+        visibility: hidden;
+        position: relative;
     }
 
-    .card:hover {
-        background-color: #ffe4db;
-        color: #bd0003;
-        font-weight: bold;
-    }
+    .card {
+        border: 0;
 
+        &:hover {
+            background-color: #ffe4db;
+            color: #bd0003;
+            font-weight: bold;
+
+            .card-img-overlay {
+                visibility: visible;
+                transition: 1s;
+            }
+        }
+    }
 }
 
 
 
 /*seccion de la página contacto*/
 section#contact {
+    h1 {
+        color: #FFF7F5;
+        text-shadow: -1px 1px black;
+    }
+
     background-image: url("../img/fondo.jpg");
     background-size: cover;
     text-align: center;
@@ -135,28 +168,17 @@ section#contact {
 
 }
 
-/*uso MIXIN para este título H1 que aparece en todas las páginas*/
-@mixin tit {
-    padding: 20px;
-    color: black;
-    font-size: 2rem;
-    text-shadow: -1px 1px white;
-    font-weight: bold;
-    text-align: center;
-}
-
-h1 {
-    @include tit
-}
-
 footer {
     background-color: #bd0003;
     text-align: center;
     color: #00bdba;
     font-size: 0.9rem;
 
-    img:hover {
-        width: 35px;
+    img {
+        padding-left: 0.5rem;
+        &:hover {
+            width: 3rem;
+        }
     }
 
     div {
