@@ -47,6 +47,9 @@ h1 {
 }
 
 header {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+
     .navbar {
         padding: 0rem;
     }
@@ -62,11 +65,12 @@ header {
     nav ul {
         display: flex;
         flex-direction: column;
+        padding-right: 1rem;
 
         li {
             list-style-type: none;
-            padding-left: 12px;
-            padding-right: 12px;
+            padding-left: 0.5rem;
+            padding-right: 1rem;
 
             a {
                 text-decoration: none;
@@ -176,6 +180,7 @@ footer {
 
     img {
         padding-left: 0.5rem;
+
         &:hover {
             width: 3rem;
         }
